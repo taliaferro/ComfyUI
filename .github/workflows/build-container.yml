@@ -27,5 +27,5 @@ jobs:
           context: .
           push: true
           build-args:
-            COMPUTE_API: ${{ compute_api }}
-          tags: ${{ compute_api }}
+            COMPUTE_API: ${{ matrix.compute_api }}
+          tags: ${{ matrix.compute_api }}
