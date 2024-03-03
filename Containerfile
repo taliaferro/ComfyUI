@@ -6,7 +6,7 @@ FROM docker.io/library/python:3.9 as cpuonly
 
 FROM ${COMPUTE_API}
 COPY . /app
-RUN pip install -r /app/requirements.txt
+RUN python3 -m pip install -r /app/requirements.txt
 
 ENTRYPOINT python3 /app/main.py --listen
 
